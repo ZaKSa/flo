@@ -44,7 +44,7 @@ public class DefaultUsersService implements UsersService {
 
     @Override
     public UsersDto findByEmail_us(String email) {
-        Users users = usersRepository.findByEmail(email);
+        Users users = usersRepository.findByEmail_us(email);
         if (users != null) {
             return usersConverter.fromUserToUserDto(users);
         }

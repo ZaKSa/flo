@@ -31,12 +31,12 @@ public class UsersController {
     }
 
     @GetMapping("/findByEmail_us")
-    public UsersDto findByLogin(@RequestParam String email) {
+    public UsersDto findByEmail_us(@RequestParam String email) {
         log.info("Handling find by login request: " + email);
         return usersService.findByEmail_us(email);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id_us}")
     public ResponseEntity<Void> deleteUsers(@PathVariable Integer id) {
         log.info("Handling delete user request: " + id);
         usersService.deleteUser(id);
