@@ -10,9 +10,6 @@
 
 <div class="container mt-5">
     <h1>Рацион</h1>
-    <div th:each = "el : ${foods}" class="alert alert-info mt-2">
-        <h3 th:text="${el.name}"></h3>
-    </div>
 </div>
 
 <p th:text="'Привет, ' + ${title} + '!'" />

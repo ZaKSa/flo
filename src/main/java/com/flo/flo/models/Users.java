@@ -1,29 +1,53 @@
 package com.flo.flo.models;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "users")
+@Data
+@NoArgsConstructor
 public class Users {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id_us;
 
-    @Column
-    private String name_us, surname_us, gender_us, phone_number_us, email_us;
+    @Column (name = "name_us")
+    private String name_us;
 
-    @Column
+    @Column (name = "surname_us")
+    private String surname_us;
+
+    @Column (name = "gender_us")
+    private String gender_us;
+
+    @Column (name = "phone_number_us")
+    private String phone_number_us;
+
+    @Column (name = "email_us")
+    private String email_us;
+
+    @Column (name = "password_us")
+    private String password_us;
+
+    @Column (name = "height")
+    private Double height;
+
+    @Column (name = "wight")
+    private Double wight;
+
+    @Column (name = "bday")
     private Date bday;
 
-    @Column
+    @Column (name = "privilege")
+    private Boolean privilege;
+
+    @Column (name = "id_pl")
     private Integer id_pl;
-
-    @Column
-    private Integer id;
-
-    @Column
-    private Double height, wight;
 
     public Integer getId_us() {
         return id_us;
@@ -73,6 +97,14 @@ public class Users {
         this.email_us = email_us;
     }
 
+    public String getPassword_us() {
+        return password_us;
+    }
+
+    public void setPassword_us(String password_us) {
+        this.password_us = password_us;
+    }
+
     public Double getHeight() {
         return height;
     }
@@ -97,19 +129,19 @@ public class Users {
         this.bday = bday;
     }
 
+    public Boolean getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(Boolean privilege) {
+        this.privilege = privilege;
+    }
+
     public Integer getId_pl() {
         return id_pl;
     }
 
     public void setId_pl(Integer id_pl) {
         this.id_pl = id_pl;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 }

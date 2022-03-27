@@ -17,7 +17,6 @@ public class UsersConverter {
         users.setWight(usersDto.getWight());
         users.setBday(usersDto.getBday());
         users.setId_pl(usersDto.getId_pl());
-        users.setId(usersDto.getId());
         return users;
     }
 
@@ -33,7 +32,6 @@ public class UsersConverter {
         usersDto.setWight(users.getWight());
         usersDto.setBday(users.getBday());
         usersDto.setId_pl(users.getId_pl());
-        usersDto.setId(users.getId());
         return usersDto;
     }
 
