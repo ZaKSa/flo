@@ -1,15 +1,14 @@
 package com.flo.flo.models;
 
-import jdk.jshell.Snippet;
+import java.util.Date;
 
 public class UsersDto {
     private Integer id_us;
     private String name_us, surname_us, gender_us, phone_number_us, email_us;
     private Double height, wight;
-
-    public static Snippet builder() {
-        return null;
-    }
+    private Date bday;
+    private Integer id_pl;
+    private Integer id;
 
     public Integer getId_us() {
         return id_us;
@@ -73,5 +72,29 @@ public class UsersDto {
 
     public void setWight(Double wight) {
         this.wight = wight;
+    }
+
+    public Date getBday() {
+        return bday;
+    }
+
+    public void setBday(Date bday) {
+        this.bday = bday;
+    }
+
+    public Integer getId_pl() {
+        return id_pl;
+    }
+
+    public void setId_pl(Integer id_pl) {
+        this.id_pl = id_pl;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

@@ -1,6 +1,7 @@
 package com.flo.flo.models;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "users")
@@ -11,6 +12,15 @@ public class Users {
 
     @Column
     private String name_us, surname_us, gender_us, phone_number_us, email_us;
+
+    @Column
+    private Date bday;
+
+    @Column
+    private Integer id_pl;
+
+    @Column
+    private Integer id;
 
     @Column
     private Double height, wight;
@@ -77,5 +87,29 @@ public class Users {
 
     public void setWight(Double wight) {
         this.wight = wight;
+    }
+
+    public Date getBday() {
+        return bday;
+    }
+
+    public void setBday(Date bday) {
+        this.bday = bday;
+    }
+
+    public Integer getId_pl() {
+        return id_pl;
+    }
+
+    public void setId_pl(Integer id_pl) {
+        this.id_pl = id_pl;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
