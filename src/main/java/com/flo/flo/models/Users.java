@@ -1,15 +1,12 @@
 package com.flo.flo.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "users")
-@Data
-@NoArgsConstructor
+
 public class Users {
 
     @Id
