@@ -5,5 +5,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class ExerciseController {
     @Autowired
-    private ProductRepository exerciseRepository;
+    private ProductRepository exercisesRepository;
 }
